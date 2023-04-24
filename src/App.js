@@ -1,6 +1,5 @@
 import './App.css';
 import Header from './Header';
-
 import SearchNews from './SearchNews';
 
 
@@ -16,7 +15,7 @@ function App() {
           
 
 
-          <h1>Brian Richardson</h1>
+          <p>Brian Richardson</p>
     </div>
   );
 }
