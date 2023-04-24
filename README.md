@@ -62,9 +62,12 @@ Moreover, I learned that it's better to start with a small, scalable function an
 
 The biggest challenge I faced with this project was the API documentation and the API itself. The documentation was outdated and I struggled with accessing it initially, which caused me to consider alternative options like using a different API. However, this turned out to be a mistake as the placeholder API I chose did not work in the same way as the original one, and did not return similar data or results.
 
-Despite this setback, I had a lot of fun coming up with a solution and ultimately this result! I initially planned to create a full-stack application, but had to change my approach due to the API issues. Instead, I used Readability to parse news article content from the actual URL DOM, which was a really cool technique that I learned and can use in future projects.
+My work around ended up just running an initial call with "/content/search?query=blog"
 
-While I was able to make progress on the project, I still faced difficulty with getting the API calls correct, which limited my ability to complete certain features like filtering by date or category. To overcome this, I plan to continue working on understanding the API better and make the requests more modular so that I can finish the core features of the project. Overall, this was a fun and challenging project!
+That returned "mostly"(about 85%) blogs. Then receiving that data object back and filtering the "search_results" by "content_type" to get everything back as a blog post. Not ideal performance wise but it's what I ran with at the time. Honestly the real difficulty was figuring out a performant way to filter those return results for dates and date ranges. And then the amount of blog posts(i.e. limit=) presented a challenge because after filtering I was already working with fewer results than what was queried. I thought I could limit how many blog posts the user has to choose from, but there's another edge case of the single time the user asks for 20 posts to be queried and the data returned after filtering is 19. Even if I were to increase the limit count past what the user requested to compensate for the initial loss in filtering.
+
+Despite this setback, I had a lot of fun coming up with a solution and ultimately this result! I initially planned to create a full-stack application, but had to change my approach but my plan-b used Readability to parse news article content from the actual URL DOM, which was a really cool technique that I learned and can use in future projects.
+
 ## Feedback
 
 I'm always trying to improve! If you have any feedback, please feel free to reach out to me at brich804@gmail.com
