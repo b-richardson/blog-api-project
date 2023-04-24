@@ -1,70 +1,105 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Home Haven Housing Blog
 
-## Available Scripts
+This project allows users to search for blog posts via a RESTful API and generates a word cloud based on the contents of the articles. The word cloud is created using D3.js library!
 
-In the project directory, you can run:
 
-### `npm start`
+## Authors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [@b-richardson](https://github.com/b-richardson)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Run Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the project
 
-### `npm run build`
+```bash
+  git clone https://github.com/b-richardson/blog-api-project
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once, in the project directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  cd client
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies
 
-### `npm run eject`
+```bash
+  npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features
 
-## Learn More
+- Word Cloud generator based on d3.js
+- Blog post cards containing the banner image of the post and a snippet of the content.
+- Search bar to query results
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Lessons Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```What did you learn while building this project?``` 
 
-### Analyzing the Bundle Size
+One of the things I learned while building this project was how to use Mozilla Readability, which is a cool library that can help me skim articles from a DOM document object. This is super helpful because it uses machine learning to extract the main content from a web page and makes it easier for me to read and analyze. I realized that this library has other potential use cases too, such as extracting data from PDFs or eBooks. It's great to know that machine learning can be applied in so many different ways!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Another lesson I learned was the importance of taking the time to fully understand the data or content I'm working with before diving into a plan. When I started working with the API, I found out that the data it provided was different from what I expected. This taught me how valuable it is to have a good grasp of the data before developing a plan of action.
 
-### Making a Progressive Web App
+Moreover, I learned that it's better to start with a small, scalable function and build upon it than to jump into a larger, complex solution. By focusing on the minimum viable product (MVP), I was able to create a result quickly and efficiently, and then improve it over time. This approach saved me a lot of time and helped me achieve a better result in the end. All in all, this project was a great learning experience!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```What challenges did you face and how did you overcome them?```
 
-### `npm run build` fails to minify
+The biggest challenge I faced with this project was the API documentation and the API itself. The documentation was outdated and I struggled with accessing it initially, which caused me to consider alternative options like using a different API. However, this turned out to be a mistake as the placeholder API I chose did not work in the same way as the original one, and did not return similar data or results.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Despite this setback, I had a lot of fun coming up with a solution and ultimately this result! I initially planned to create a full-stack application, but had to change my approach due to the API issues. Instead, I used Readability to parse news article content from the actual URL DOM, which was a really cool technique that I learned and can use in future projects.
+
+While I was able to make progress on the project, I still faced difficulty with getting the API calls correct, which limited my ability to complete certain features like filtering by date or category. To overcome this, I plan to continue working on understanding the API better and make the requests more modular so that I can finish the core features of the project. Overall, this was a fun and challenging project!
+## Feedback
+
+I'm always trying to improve! If you have any feedback, please feel free to reach out to me at brich804@gmail.com
+
+
+## Optimizations
+
+```What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility```
+
+There are definitely optimizations to be made! 
+
+Inline-styling
+
+- Due to time constraints there is some inline styling. Removing the inline styling would easily make the code more readable and maintainable.
+
+Accessibility
+
+- Simple things like adding labels to form elements
+
+Performance
+
+- The majority of the query logic should be being held by the API, but in this instance I had to do a lot in app so it does run slow. Esspecially based on all the results and size of the content that is returned!
+
+
+
+## Roadmap
+
+
+Add more integrations
+
+- Hoping to make the API call parameters modular in the future
+
+Generally this whole thing was thrown together quick but I wanted to make something that would be useful to a user, and give more context to the word cloud.
+
+And that was just a lot of fun figuring out what that might mean for a user and ultimately for me. "What other information would I want to have?" "What other interactions would I want to use?" And I definitely wanted to have a little fun, challenge myself, and try and make something closer to a "product"!
+
+
+
